@@ -24,7 +24,13 @@
         <img src="images/logo.png" alt="logo" />
       </div>
       <div class="search">
-        <input type="text" class="search__input" id="search-input" />
+        <input
+          list="cities"
+          type="text"
+          class="search__input"
+          id="search-input"
+        />
+        <datalist id="cities"> </datalist>
         <button class="search__button" id="search-button">Rechercher</button>
       </div>
     </header>
@@ -151,7 +157,7 @@
     </main>
     <footer></footer>
   </body>
-  <script type="text/javascript" src="actions/fetchs.js"></script>
-  <script type="text/javascript" src="actions/displays.js"></script>
+  <script type="text/javascript" src="actions/weather-api-provider.js"></script>
+  <script type="text/javascript" src="actions/renderer.js"></script>
   <script type="text/javascript" src="actions/base.js"></script>
 </html>

@@ -1,4 +1,4 @@
-function CurrentWeatherDisplay(_currentWeather, _name) {
+function CurrentWeatherRender(_currentWeather, _name) {
   document.querySelector("#name").innerHTML = _name;
 
   document
@@ -28,7 +28,7 @@ function CurrentWeatherDisplay(_currentWeather, _name) {
     .classList.replace("wi-na", `towards-45-deg`);
 }
 
-function WeekWeatherDisplay(week) {
+function WeekWeatherRender(week) {
   for (let i = 1; i < week.length; i++) {
     const day = week[i];
     //Date

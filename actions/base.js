@@ -15,9 +15,9 @@ const months = [
   "Dec",
 ];
 
-//searchInput.addEventListener("input", function () {
-//  CheckInput();
-//});
+searchInput.addEventListener("input", function () {
+  CheckInput();
+});
 
 searchButton.addEventListener("click", function () {
   OnSearchClicked();
@@ -32,8 +32,8 @@ async function OnSearchClicked() {
     currentWeather.coord.lat
   );
   // Display Datas
-  CurrentWeatherDisplay(week.current, currentWeather.name);
-  WeekWeatherDisplay(week.daily);
+  CurrentWeatherRender(week.current, currentWeather.name);
+  WeekWeatherRender(week.daily);
   return;
 }
 
@@ -42,13 +42,13 @@ function GetUserInput() {
   return city;
 }
 
-//async function CheckInput() {
-//  if (searchInput.value.length >= 3) {
-//    const test = await FetchAllLocations(searchInput.value);
-//    if (test.lenth > 0) {
-//      // affecter les valeurs de la liste dans test au datalist;
-//    }
-//  }
-//  //rien faire
-//  return;
-//}
+async function CheckInput() {
+  if (searchInput.value.length >= 3) {
+    const test = await FetchAllLocations(searchInput.value);
+    if (test.lenth > 0) {
+      // affecter les valeurs de la liste dans test au datalist;
+    }
+  }
+  //rien faire
+  return;
+}
