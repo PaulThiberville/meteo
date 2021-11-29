@@ -25,17 +25,21 @@ searchButton.addEventListener("click", function () {
 });
 
 async function OnSearchClicked() {
-  // Get city name, lon and lat from FetchCurrentWeather()
-  const currentWeather = await FetchCurrentWeather(GetUserInput());
-  // Get week's weather from previous object properties
-  const week = await FetchWeekWeather(
-    currentWeather.coord.lon,
-    currentWeather.coord.lat
-  );
-  // Display Datas
-  CurrentWeatherRender(week.current, currentWeather.name);
+  //Attraper l'element avec le tag option et la meme value que le searchInput
+  const options = document.getElementsByTagName("option");
+  let option;
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].value == searchInput.value) {
+      option = options[i];
+    }
+  }
+  //Recuperer la valeur de son attribut data-id
+  const coord = option.getAttribute("data-id");
+  //creer un objet week en appelant fetchWeekWeather avec les paramatetres de l'attribut
+  const week = await FetchWeekWeather(coord);
+  //Afficher avec WeekRender(week)
+  CurrentWeatherRender(week.current, option.value);
   WeekWeatherRender(week.daily);
-  return;
 }
 
 function GetUserInput() {
@@ -62,6 +66,10 @@ function FillDatalist(_newData) {
   for (let i = 0; i < _newData.length; i++) {
     let option = document.createElement("option");
     option.value = _newData[i].name + "/" + _newData[i].country;
+    option.setAttribute(
+      "data-id",
+      `lat=${_newData[i].lat}&lon=${_newData[i].lon}`
+    );
     datalist.appendChild(option);
   }
   console.log(_newData);
