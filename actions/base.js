@@ -1,5 +1,6 @@
 const searchButton = document.querySelector("#search-button");
 const searchInput = document.querySelector("#search-input");
+const datalist = document.querySelector("#cities");
 const months = [
   "Jan",
   "Fev",
@@ -43,12 +44,25 @@ function GetUserInput() {
 }
 
 async function CheckInput() {
+  ClearDatalist();
   if (searchInput.value.length >= 3) {
-    const test = await FetchAllLocations(searchInput.value);
-    if (test.lenth > 0) {
-      // affecter les valeurs de la liste dans test au datalist;
-    }
+    const locations = await FetchAllLocations(searchInput.value);
+    FillDatalist(locations);
   }
-  //rien faire
-  return;
+}
+
+function ClearDatalist() {
+  const childrens = datalist.children;
+  for (let i = 0; i < childrens.length; i++) {
+    childrens[i].remove();
+  }
+}
+
+function FillDatalist(_newData) {
+  for (let i = 0; i < _newData.length; i++) {
+    let option = document.createElement("option");
+    option.value = _newData[i].name + "/" + _newData[i].country;
+    datalist.appendChild(option);
+  }
+  console.log(_newData);
 }
