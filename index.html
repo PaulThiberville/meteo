@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="weather-icons/css/weather-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="weather-icons/css/weather-icons-wind.css"
+    />
+    <link rel="icon" href="images/logo.ico" />
+    <title>Meteo</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+      <div class="search">
+        <input type="text" class="search__input" id="search-input" />
+        <button class="search__button" id="search-button">Rechercher</button>
+      </div>
+    </header>
+    <main>
+      <div class="weather">
+        <div class="weather__info--100">
+          <div class="weather__info__element">
+            <p id="name" class="name">n-a</p>
+          </div>
+        </div>
+      </div>
+      <div class="weather">
+        <div class="weather__info--50">
+          <div class="weather__info__element">
+            <p>
+              <i class="wi wi-na wi-large" id="description-icon"></i>
+            </p>
+            <p class="bold weather__info__element" id="description-value">
+              N/A
+            </p>
+          </div>
+        </div>
+        <div class="weather__info--50">
+          <div class="weather__info__element">
+            <p>
+              <i class="wi wi-thermometer wi-large"></i>
+            </p>
+            <p class="bold weather__info__element" id="temp-value">n-a</p>
+          </div>
+        </div>
+      </div>
+      <div class="weather">
+        <div class="weather__info--25">
+          <div class="weather__info__element">
+            <p>
+              <i class="wi wi-humidity wi-medium"></i>
+            </p>
+            <p class="bold weather__info__element" id="humidity-value">n-a</p>
+          </div>
+        </div>
+        <div class="weather__info--25">
+          <div class="weather__info__element">
+            <p>
+              <i class="wi wi-barometer wi-medium"></i>
+            </p>
+            <p class="bold weather__info__element" id="pressure-value">n-a</p>
+          </div>
+        </div>
+        <div class="weather__info--25">
+          <div class="weather__info__element">
+            <p>
+              <i class="wi wi-small-craft-advisory wi-medium"></i>
+            </p>
+            <p class="bold weather__info__element" id="wind-speed-value">n-a</p>
+          </div>
+        </div>
+        <div class="weather__info--25">
+          <div class="weather__info__element">
+            <p>
+              <i class="wi wi-wind wi-na wi-medium" id="wind-deg-icon"></i>
+            </p>
+            <p class="bold weather__info__element" id="wind-deg-value">n-a</p>
+          </div>
+        </div>
+      </div>
+      <div class="weather">
+        <div class="weather__info--15">
+          <div class="weather__info__element">
+            <p id="date-1" class="grey-color">n-a</p>
+            <i class="wi wi-na" id="icon-1"></i>
+            <p id="max-1" class="max-color">n-a</p>
+            <p id="min-1" class="min-color">n-a</p>
+          </div>
+        </div>
+        <div class="weather__info--15">
+          <div class="weather__info__element">
+            <p id="date-2" class="grey-color">n-a</p>
+            <i class="wi wi-na" id="icon-2"></i>
+            <p id="max-2" class="max-color">n-a</p>
+            <p id="min-2" class="min-color">n-a</p>
+          </div>
+        </div>
+        <div class="weather__info--15">
+          <div class="weather__info__element">
+            <p id="date-3" class="grey-color">n-a</p>
+            <i class="wi wi-na" id="icon-3"></i>
+            <p id="max-3" class="max-color">n-a</p>
+            <p id="min-3" class="min-color">n-a</p>
+          </div>
+        </div>
+        <div class="weather__info--15">
+          <div class="weather__info__element">
+            <p id="date-4" class="grey-color">n-a</p>
+            <i class="wi wi-na" id="icon-4"></i>
+            <p id="max-4" class="max-color">n-a</p>
+            <p id="min-4" class="min-color">n-a</p>
+          </div>
+        </div>
+        <div class="weather__info--15">
+          <div class="weather__info__element">
+            <p id="date-5" class="grey-color">n-a</p>
+            <i class="wi wi-na" id="icon-5"></i>
+            <p id="max-5" class="max-color">n-a</p>
+            <p id="min-5" class="min-color">n-a</p>
+          </div>
+        </div>
+        <div class="weather__info--15">
+          <div class="weather__info__element">
+            <p id="date-6" class="grey-color">n-a</p>
+            <i class="wi wi-na" id="icon-6"></i>
+            <p id="max-6" class="max-color">n-a</p>
+            <p id="min-6" class="min-color">n-a</p>
+          </div>
+        </div>
+        <div class="weather__info--15">
+          <div class="weather__info__element">
+            <p id="date-7" class="grey-color">n-a</p>
+            <i class="wi wi-na" id="icon-7"></i>
+            <p id="max-7" class="max-color">n-a</p>
+            <p id="min-7" class="min-color">n-a</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="javascript/base.js"></script>
+</html>
