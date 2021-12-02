@@ -2,7 +2,6 @@ const searchButton = document.querySelector("#search-button");
 const searchInput = document.querySelector("#search-input");
 const container = document.querySelector("#locations-container");
 const locationInfos = document.querySelector("#locations-info");
-const backButton = document.querySelector("#back-button");
 
 //test();
 //async function test() {
@@ -12,11 +11,6 @@ const backButton = document.querySelector("#back-button");
 
 searchButton.addEventListener("click", function () {
   OnSearchClicked();
-});
-
-backButton.addEventListener("click ", function () {
-  console.log("click");
-  //window.location.reload(true);
 });
 
 async function OnSearchClicked() {
