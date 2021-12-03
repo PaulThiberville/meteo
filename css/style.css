@@ -22,6 +22,7 @@ body {
 .logo-container img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .back-button {
@@ -195,7 +196,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  -webkit-text-fill-color: transparent;
   margin-top: 10px;
 }
 .wi-large {
@@ -209,5 +209,4 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  -webkit-text-fill-color: transparent;
 }
