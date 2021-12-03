@@ -192,8 +192,10 @@ body {
 }
 .wi {
   background: linear-gradient(rgb(64, 98, 250), rgb(81, 220, 255));
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
   margin-top: 10px;
 }
 .wi-large {
@@ -204,6 +206,8 @@ body {
 }
 .color-gradient {
   background: linear-gradient(rgb(64, 98, 250), rgb(81, 220, 255));
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
 }
