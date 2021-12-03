@@ -204,9 +204,3 @@ body {
 .wi-medium {
   font-size: 32px;
 }
-.color-gradient {
-  background: linear-gradient(rgb(64, 98, 250), rgb(81, 220, 255));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}

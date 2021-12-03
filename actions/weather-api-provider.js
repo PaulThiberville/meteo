@@ -26,7 +26,7 @@ async function FetchWeekWeather(_lon, _lat) {
 }
 
 async function FetchAllLocations(_input) {
-  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${_input}&limit=5&appid=${myKey}`;
+  const url = `https://api.openweathermap.org/geo/1.0/direct?q=${_input}&limit=5&appid=${myKey}`;
   try {
     const result = await fetch(url);
     return await result.json();
